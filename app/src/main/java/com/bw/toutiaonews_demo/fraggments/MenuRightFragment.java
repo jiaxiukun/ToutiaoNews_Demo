@@ -14,10 +14,21 @@ import com.bw.toutiaonews_demo.R;
  */
 
 public class MenuRightFragment extends Fragment {
+
+    private View view;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.menuright_fragment,container,false);
+        view = inflater.inflate(R.layout.menuright_fragment, container, false);
         return view;
+    }
+
+    public void changeMode(boolean white) {
+        if (white) {
+            view.setBackgroundColor(getResources().getColor(R.color.iwhite));
+        } else {
+            view.setBackgroundColor(getResources().getColor(R.color.night_up));
+        }
     }
 }

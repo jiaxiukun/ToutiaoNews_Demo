@@ -1,6 +1,5 @@
 package com.bw.toutiaonews_demo.fraggments;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -55,25 +54,24 @@ public class IndexFragment extends BaseFragment {
     }
 
     //切换夜间模式
-    public void changeMode(boolean white){
+    public void changeMode(boolean white) {
 
-        if (white){
-            tabLayout.setBackgroundColor(Color.GRAY);
+        if (white) {
+            tabLayout.setBackgroundColor(getResources().getColor(R.color.tablayout_bg));
             setWhiteMode();
-        }else {
-            tabLayout.setBackgroundColor(Color.BLACK);
+        } else {
+            tabLayout.setBackgroundColor(getResources().getColor(R.color.nignt_middle));
             setNightMode();
         }
-
     }
 
     private void setWhiteMode() {
         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.title_color));
-        tabLayout.setTabTextColors(getResources().getColor(R.color.iblack), getResources().getColor(R.color.title_color));
-
+        tabLayout.setTabTextColors(getResources().getColor(R.color.gray), getResources().getColor(R.color.title_color));
     }
-    private void setNightMode(){
+
+    private void setNightMode() {
         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.title_color));
-        tabLayout.setTabTextColors(getResources().getColor(R.color.iblack),getResources().getColor(R.color.title_color));
+        tabLayout.setTabTextColors(getResources().getColor(R.color.gray), getResources().getColor(R.color.night_title_color));
     }
 }

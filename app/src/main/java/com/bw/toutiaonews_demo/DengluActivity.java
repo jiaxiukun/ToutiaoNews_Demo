@@ -38,7 +38,7 @@ public class DengluActivity extends Activity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                IntentAllUtils.getInstance().intent(DengluActivity.this,ZhuCeActivity.class);
+                IntentAllUtils.getInstance().intent(DengluActivity.this, ZhuCeActivity.class);
                 finish();
             }
         });
@@ -47,7 +47,7 @@ public class DengluActivity extends Activity {
             public void onClick(View v) {
                 String tel = num.getText().toString().trim();
                 String password = pwd.getText().toString().trim();
-                HttpUtils.getAsyn(ApiUtils.DENGLU+"?username="+tel+"&password="+password+"&postkey=1503d", null, Login.class, new HttpUtils.HttpCallBack<Login>() {
+                HttpUtils.getAsyn(ApiUtils.DENGLU + "?username=" + tel + "&password=" + password + "&postkey=1503d", null, Login.class, new HttpUtils.HttpCallBack<Login>() {
                     @Override
                     public void onSuccess(Login login) {
                         if (login.getRet_code() == 200) {

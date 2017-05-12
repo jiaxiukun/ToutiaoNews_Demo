@@ -1,17 +1,18 @@
 package com.bw.toutiaonews_demo.fraggments.events;
 
 /**
- * Created by 贾秀坤 on 2017/5/10.
- * 写一个类来存切换日夜模式
+ * date:2017/5/12
+ * author:徐帅(acer)
+ * funcation:
  */
 
-public class EventActivity {
-
+public class BlankEvent {
     public boolean white;
 
-    public EventActivity(boolean white) {
+    public BlankEvent(boolean white) {
         this.white = white;
     }
+
 
     public boolean isWhite() {
         return white;
@@ -19,6 +20,5 @@ public class EventActivity {
 
     public void setWhite(boolean white) {
         this.white = white;
-
     }
 }
