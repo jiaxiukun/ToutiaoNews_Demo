@@ -38,6 +38,15 @@ public class MainActivity extends SlidingFragmentActivity {
     }
 
     private void initLeftRight() {
+
+        IndexFragment indexFragment = new IndexFragment();
+
+        if (!indexFragment.isAdded()) {
+            getSupportFragmentManager().beginTransaction().add(R.id.container, indexFragment).commit();
+        }
+
+        getSupportFragmentManager().beginTransaction().show(indexFragment).commit();
+
         Fragment legtFragment = new MentLeftFragment();
         setBehindContentView(R.layout.left_menu_frame);
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_leftmenu_id, legtFragment).commit();
@@ -116,6 +125,5 @@ public class MainActivity extends SlidingFragmentActivity {
                 textView.setTextColor(resouseId);
             }
         }
-
     }
 }

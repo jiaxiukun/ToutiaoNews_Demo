@@ -3,6 +3,7 @@ package com.bw.toutiaonews_demo.fraggments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,47 +11,41 @@ import android.view.ViewGroup;
 
 import com.bw.toutiaonews_demo.R;
 import com.bw.toutiaonews_demo.adapters.IndexFragmentAdapter;
-import com.bw.toutiaonews_demo.base.BaseFragment;
 
 /**
  * Created by 贾秀坤 on 2017/5/10.
  */
 
-public class IndexFragment extends BaseFragment {
+public class IndexFragment extends Fragment {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private IndexFragmentAdapter indexFragmentAdapter;
+    private View view;
 
     //推荐
-    public static IndexFragment newInstance(int type) {
-        IndexFragment fragment = new IndexFragment();
-        Bundle args = new Bundle();
-        args.putInt("args", type);
-        fragment.setArguments(args);
-        return fragment;
-    }
+//    public static IndexFragment newInstance(int type) {
+//        IndexFragment fragment = new IndexFragment();
+//        Bundle args = new Bundle();
+//        args.putInt("args", type);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.index_fragment, container, false);
-
-        initview(view);
-
-        return view;
-    }
-
-    private void initview(View view) {
+        view = inflater.inflate(R.layout.index_fragment, container, false);
         tabLayout = (TabLayout) view.findViewById(R.id.index_tablayout);
         viewPager = (ViewPager) view.findViewById(R.id.index_viewpager);
-        indexFragmentAdapter = new IndexFragmentAdapter(getActivity().getSupportFragmentManager());
+        indexFragmentAdapter = new IndexFragmentAdapter(getFragmentManager());
         viewPager.setAdapter(indexFragmentAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        setWhiteMode();
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+        setWhiteMode();
 
+        return view;
     }
 
     //切换夜间模式
