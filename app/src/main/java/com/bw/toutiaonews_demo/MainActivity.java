@@ -1,6 +1,8 @@
 package com.bw.toutiaonews_demo;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.Bundle;
@@ -16,14 +18,17 @@ import com.bw.toutiaonews_demo.fraggments.MenuRightFragment;
 import com.bw.toutiaonews_demo.fraggments.events.EventActivity;
 import com.bwei.slidingmenu.SlidingMenu;
 import com.bwei.slidingmenu.app.SlidingFragmentActivity;
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class MainActivity extends SlidingFragmentActivity {
+public class MainActivity extends SlidingFragmentActivity implements UMAuthListener,MenuRightFragment.ShareListener{
 
     private SlidingMenu slidingMenu;
     private List<Fragment> list=new ArrayList<Fragment>();
@@ -110,5 +115,41 @@ public class MainActivity extends SlidingFragmentActivity {
             }
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void share(SHARE_MEDIA share_media) {
+
+    }
+
+    //分享的回调
+    @Override
+    public void onStart(SHARE_MEDIA share_media) {
+
+    }
+
+    @Override
+    public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+
+    }
+
+    @Override
+    public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+
+    }
+
+    @Override
+    public void onCancel(SHARE_MEDIA share_media, int i) {
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
