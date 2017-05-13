@@ -18,6 +18,7 @@ import com.bw.toutiaonews_demo.fraggments.MenuRightFragment;
 import com.bw.toutiaonews_demo.fraggments.events.EventActivity;
 import com.bwei.slidingmenu.SlidingMenu;
 import com.bwei.slidingmenu.app.SlidingFragmentActivity;
+import com.igexin.sdk.PushManager;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
@@ -38,6 +39,8 @@ public class MainActivity extends SlidingFragmentActivity implements UMAuthListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initLeftRight();
+
+
 
     }
 

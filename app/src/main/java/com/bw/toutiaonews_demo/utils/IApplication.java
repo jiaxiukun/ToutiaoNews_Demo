@@ -2,6 +2,7 @@ package com.bw.toutiaonews_demo.utils;
 
 import android.app.Application;
 
+import com.igexin.sdk.PushManager;
 import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
@@ -17,6 +18,9 @@ public class IApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        // com.getui.demo.DemoPushService 为第三方自定义推送服务
+        PushManager.getInstance().initialize(this.getApplicationContext(),com.bw.toutiaonews_demo.DemoPushService.class);
+        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(),com.bw.toutiaonews_demo.DemoIntentService.class);
 
         UMShareAPI.get(this);
         Config.DEBUG = true;
