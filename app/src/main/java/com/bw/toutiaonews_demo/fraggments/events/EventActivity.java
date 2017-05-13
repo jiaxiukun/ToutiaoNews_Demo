@@ -8,14 +8,17 @@ package com.bw.toutiaonews_demo.fraggments.events;
 public class EventActivity {
 
     public boolean white;
-    public EventActivity(boolean white){
-        this.white=white;
+
+    public EventActivity(boolean white) {
+        this.white = white;
     }
-    public boolean isWhite(){
+
+    public boolean isWhite() {
         return white;
     }
-    public void setWhite(boolean white){
-        this.white=white;
+
+    public void setWhite(boolean white) {
+        this.white = white;
 
     }
 }

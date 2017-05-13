@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/praise_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sl_praise" />
+
+    <TextView
+        android:id="@+id/praise_zan_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="111" />
+
+    <ImageView
+        android:id="@+id/praise_un_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sl_unpraise" />
+
+    <TextView
+        android:id="@+id/praise_un_zan_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="111" />
+
+    <ImageView
+        android:id="@+id/praise_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sl_comment" />
+
+    <TextView
+        android:id="@+id/praise_comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="111" />
+
+    <CheckBox
+        android:id="@+id/praise_shoucang"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/sl_shoucang" />
+
+    <ImageView
+        android:id="@+id/praise_fenxiang"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_action_repost_normal" />
+
+</LinearLayout>

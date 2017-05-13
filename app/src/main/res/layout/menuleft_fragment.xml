@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:custom="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/iwhite"
               android:orientation="vertical">
 
-
     <LinearLayout
+        android:background="@color/login"
+        android:id="@+id/left_line_up"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_margin="10dp"
+        android:layout_height="100dp"
         android:orientation="vertical">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,20 +43,26 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:text="更多登录方式"
-            android:textColor="@color/iblack"/>
-
+            android:textColor="@color/gray_plus"/>
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
 
     <LinearLayout
+        android:id="@+id/left_line_middle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/xuanze"
         android:orientation="vertical"
         >
 
         <ScrollView
+            android:scrollbars="none"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -232,29 +235,54 @@
             </LinearLayout>
         </ScrollView>
 
-
     </LinearLayout>
 
+
+
     <LinearLayout
+        android:id="@+id/left_line_down"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:layout_height="90dp"
+        android:background="@color/xuanze"
         android:orientation="horizontal">
 
-        <com.kyleduo.switchbutton.SwitchButton
-            android:id="@+id/switch_btn"
-            style="@style/SwitchButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:checked="true"
-            android:textColor="#000000"
-            custom:kswBackRadius="10dp"
-            custom:kswTextOff="夜间模式"
-            custom:kswTextOn="白天模式"
-            custom:kswThumbColor="#0000FF"
-            custom:kswThumbRadius="10dp"/>
+        <RadioButton
+            android:id="@+id/left_download"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/sl_loading"
+            android:gravity="center"
+            android:text="离线下载"
+            android:textColor="@color/gray"
+            />
 
+        <CheckBox
+            android:id="@+id/left_night"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/sl_night"
+            android:gravity="center"
+            android:text="夜间模式"
+            android:textColor="@color/gray"/>
+
+        <RadioButton
+            android:id="@+id/left_setting"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/sl_setting"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="@color/gray"
+            />
 
     </LinearLayout>
 
