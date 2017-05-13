@@ -7,10 +7,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bw.toutiaonews_demo.R;
 
-/**
- * description
- * Created by 张芸艳 on 2017/4/28.
- */
 
 public class GlideUtils {
     private static GlideUtils glideUtils;
