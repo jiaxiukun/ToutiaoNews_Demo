@@ -1,58 +1,34 @@
 package com.bw.toutiaonews_demo.utils;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
- * description
- * Created by 张芸艳 on 2017/4/25.
+ * Created by muhanxi on 17/4/24.
  */
 
 public class StringUtils {
-    private static StringUtils stringUtils;
 
 
 
-    public static StringUtils getInstance() {
-        if (stringUtils == null) {
-            synchronized (StringUtils.class) {
-                if (stringUtils == null) {
-                    stringUtils = new StringUtils();
-                }
+    public static  String inputStreamToString(InputStream inputStream) {
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+        byte [] buffer = new byte[1024];
+
+        int length = 0 ;
+
+        try {
+            while ((length = inputStream.read(buffer)) != -1) {
+                byteArrayOutputStream.write(buffer,0,length);
             }
-        }
-        return stringUtils;
-    }
-
-    private StringUtils() {
-    }
-    public String SubString (String string){
-        if (string.length()>12){
-            string=string.substring(0,12)+"…";
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            return  byteArrayOutputStream.toString() ;
         }
 
-        return string;
-    }
-    public String SubStringLong (String string){
-        if (string.length()>32){
-            string=string.substring(0,32)+"…";
-        }
-
-        return string;
-    }
-    public String SubStringCount (String string){
-        if (string.length()>4){
-            string=string.substring(0,4)+"万";
-        }
-
-        return string;
-    }
-    public static String stampToDate(String s){
-        String res;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
-        long lt = new Long(s);
-        Date date = new Date(lt);
-        res = simpleDateFormat.format(date);
-        return res;
     }
 }

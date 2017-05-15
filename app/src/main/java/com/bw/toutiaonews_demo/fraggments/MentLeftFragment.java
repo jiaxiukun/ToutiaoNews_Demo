@@ -17,6 +17,7 @@ import com.bw.toutiaonews_demo.ZhuCeActivity;
 import com.bw.toutiaonews_demo.fraggments.events.BlankEvent;
 import com.bw.toutiaonews_demo.fraggments.events.EventActivity;
 import com.bw.toutiaonews_demo.utils.PreferencesUtils;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
@@ -80,7 +81,6 @@ public class MentLeftFragment extends Fragment implements View.OnClickListener {
                     night.setText("日间模式");
                 } else {
                     night.setText("夜间模式");
-
                 }
             }
         });
@@ -109,6 +109,8 @@ public class MentLeftFragment extends Fragment implements View.OnClickListener {
                  * 如果想在UI中显示自己QQ的图片，可以在对应的布局中写两个imageview，然后显示的时候隐藏其中一个
                  * 最后用map,imageloader来显示图片
                  */
+
+                ImageLoader.getInstance().displayImage(iconurl, img_qq);
             }
 
             @Override
@@ -124,7 +126,6 @@ public class MentLeftFragment extends Fragment implements View.OnClickListener {
     }
 
     private void setBackground(boolean white) {
-
         if (white) {
             up.setBackgroundColor(getResources().getColor(R.color.login));
             down.setBackgroundColor(getResources().getColor(R.color.xuanze));
@@ -137,10 +138,8 @@ public class MentLeftFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-
     // mode true 夜 false 日
     private void setMode(boolean mode) {
         PreferencesUtils.addConfigInfo(getContext(), "nightmode", mode);
-
     }
 }

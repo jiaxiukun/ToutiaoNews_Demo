@@ -1,17 +1,9 @@
 package com.bw.toutiaonews_demo.bean;
 
-import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * description
- * Created by 张芸艳 on 2017/5/10.
- */
-
-public class PhotoBook {
-
-
+public class TuijianBean1 {
 
     private int login_status;
     private int total_number;
@@ -106,7 +98,7 @@ public class PhotoBook {
 
     public static class TipsBean {
         /**
-         * display_info : 今日头条推荐引擎有8条更新
+         * display_info : 今日头条推荐引擎有11条更新
          * open_url :
          * web_url :
          * app_name : 今日头条
@@ -201,90 +193,20 @@ public class PhotoBook {
     }
 
     public static class DataBean {
-        /**
-         * read_count : 182605
-         * media_name : 楚安汽修资料
-         * ban_comment : 0
-         * abstract : 话说，这个世界上的汽车形形色色，什么样子的都有。但是，就是因为车的种类太多了，很多车标我们都不认识。没关系，今天，咱们就搞一个车标大汇总，随看随查，保证您认的特别全！这份车标大统计中，大概有300多个车标。 如果有哪些我们落下的，欢迎您给我们补充！
-         * image_list : [{"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f","width":549,"url_list":[{"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb3.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb9.pstatp.com/list/1bf70006d1edae58362f"}],"uri":"list/1bf70006d1edae58362f","height":308},{"url":"http://p1.pstatp.com/list/1dcb000d7e9a19a20799","width":553,"url_list":[{"url":"http://p1.pstatp.com/list/1dcb000d7e9a19a20799"},{"url":"http://pb3.pstatp.com/list/1dcb000d7e9a19a20799"},{"url":"http://pb9.pstatp.com/list/1dcb000d7e9a19a20799"}],"uri":"list/1dcb000d7e9a19a20799","height":311},{"url":"http://p3.pstatp.com/list/1dcc000d858bfa09781d","width":554,"url_list":[{"url":"http://p3.pstatp.com/list/1dcc000d858bfa09781d"},{"url":"http://pb9.pstatp.com/list/1dcc000d858bfa09781d"},{"url":"http://pb1.pstatp.com/list/1dcc000d858bfa09781d"}],"uri":"list/1dcc000d858bfa09781d","height":311}]
-         * has_video : false
-         * article_type : 0
-         * tag : news_car
-         * forward_info : {"forward_count":11}
-         * has_m3u8_video : 0
-         * keywords : 车标
-         * rid : 201705110859420100040151391612BE
-         * show_portrait_article : false
-         * user_verified : 0
-         * aggr_type : 1
-         * cell_type : 0
-         * article_sub_type : 0
-         * bury_count : 1
-         * title : 世界最全车标集合~能认识一半我叫你大神！
-         * ignore_web_transform : 1
-         * source_icon_style : 4
-         * tip : 1
-         * hot : 1
-         * share_url : http://toutiao.com/a6415150038687056130/?iid=3642583580&app=news_article
-         * has_mp4_video : 0
-         * source : 楚安汽修资料
-         * comment_count : 170
-         * article_url : http://toutiao.com/group/6415150038687056130/
-         * filter_words : [{"id":"8:0","name":"重复、旧闻","is_selected":false},{"id":"9:1","name":"内容质量差","is_selected":false},{"id":"5:766082906","name":"来源:楚安汽修资料","is_selected":false},{"id":"6:562632","name":"车标","is_selected":false}]
-         * share_count : 8017
-         * publish_time : 1493947971
-         * action_list : [{"action":1,"extra":{},"desc":""},{"action":3,"extra":{},"desc":""},{"action":7,"extra":{},"desc":""},{"action":9,"extra":{},"desc":""}]
-         * gallary_image_count : 6
-         * cell_layout_style : 1
-         * tag_id : 6415150038687056130
-         * action_extra : {"channel_id": 3189398993}
-         * video_style : 0
-         * verified_content :
-         * display_url : http://toutiao.com/group/6415150038687056130/
-         * large_image_list : []
-         * item_id : 6415798668376408577
-         * is_subject : false
-         * show_portrait : false
-         * repin_count : 25715
-         * cell_flag : 11
-         * user_info : {"verified_content":"","avatar_url":"http://p1.pstatp.com/thumb/e59000f3a39dcd5f2ec","user_id":52177476743,"name":"楚安汽修资料","follower_count":0,"follow":false,"user_auth_info":"","user_verified":false,"description":"汽修行业的良师益友！"}
-         * source_open_url : sslocal://profile?uid=52177476743
-         * level : 0
-         * like_count : 11
-         * digg_count : 11
-         * behot_time : 1494464382
-         * cursor : 1494464382999
-         * url : http://toutiao.com/group/6415150038687056130/
-         * preload_web : 1
-         * user_repin : 0
-         * has_image : true
-         * item_version : 0
-         * media_info : {"user_id":52177476743,"verified_content":"","avatar_url":"http://p3.pstatp.com/large/e59000f3a39dcd5f2ec","media_id":52177587849,"name":"楚安汽修资料","recommend_type":0,"follow":false,"recommend_reason":"","is_star_user":false,"user_verified":false}
-         * group_id : 6415150038687056130
-         * middle_image : {"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f","width":549,"url_list":[{"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb3.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb9.pstatp.com/list/1bf70006d1edae58362f"}],"uri":"list/1bf70006d1edae58362f","height":308}
-         * log_extra : {"rit": 1, "convert_id": 0, "req_id": "201705110859420100040151391612BE", "ad_price": "WRG2CQAN8qNZEbYJAA3yo9NLdoiAB3XJo-6ykQ"}
-         * more_mode : true
-         * display_info : 正规一年制本科,一键解决你的学历问题!
-         * label : 广告
-         * expire_seconds : 0
-         * ad_id : 60065849971
-         * natant_level : 2
-         * article_alt_url : http://toutiao.com/group/article/6418376558142030082/?ad_id=60060196400&cid=60065849971&req_id=201705110859420100040151391612BE
-         * ad_label : 广告
-         */
 
+
+        private int id ;
         private int read_count;
-        private String media_name;
         private int ban_comment;
-        @SerializedName("abstract")
         private String abstractX;
+        private int ban_bury;
         private boolean has_video;
         private int article_type;
         private String tag;
-        private ForwardInfoBean forward_info;
         private int has_m3u8_video;
         private String keywords;
         private String rid;
+        private String label;
         private boolean show_portrait_article;
         private int user_verified;
         private int aggr_type;
@@ -303,19 +225,18 @@ public class PhotoBook {
         private String article_url;
         private int share_count;
         private int publish_time;
-        private int gallary_image_count;
+        private boolean has_image;
         private int cell_layout_style;
         private long tag_id;
-        private String action_extra;
         private int video_style;
         private String verified_content;
         private String display_url;
+        private boolean is_stick;
         private long item_id;
         private boolean is_subject;
         private boolean show_portrait;
         private int repin_count;
         private int cell_flag;
-        private UserInfoBean user_info;
         private String source_open_url;
         private int level;
         private int like_count;
@@ -325,24 +246,31 @@ public class PhotoBook {
         private String url;
         private int preload_web;
         private int user_repin;
-        private boolean has_image;
+        private int label_style;
         private int item_version;
-        private MediaInfoBean media_info;
         private long group_id;
         private MiddleImageBean middle_image;
+        private String video_id;
+        private String media_name;
+        private VideoDetailInfoBean video_detail_info;
+        private int video_duration;
+        private int group_flags;
+        private UserInfoBean user_info;
+        private MediaInfoBean media_info;
+        private int gallary_image_count;
         private String log_extra;
-        private boolean more_mode;
         private String display_info;
-        private String label;
         private int expire_seconds;
         private long ad_id;
         private int natant_level;
         private String article_alt_url;
         private String ad_label;
-        private List<ImageListBean> image_list;
-        private List<FilterWordsBean> filter_words;
+        private List<ImageBean> image_list;
+        private List<?> filter_words;
         private List<ActionListBean> action_list;
         private List<?> large_image_list;
+
+
 
         public int getRead_count() {
             return read_count;
@@ -350,14 +278,6 @@ public class PhotoBook {
 
         public void setRead_count(int read_count) {
             this.read_count = read_count;
-        }
-
-        public String getMedia_name() {
-            return media_name;
-        }
-
-        public void setMedia_name(String media_name) {
-            this.media_name = media_name;
         }
 
         public int getBan_comment() {
@@ -374,6 +294,14 @@ public class PhotoBook {
 
         public void setAbstractX(String abstractX) {
             this.abstractX = abstractX;
+        }
+
+        public int getBan_bury() {
+            return ban_bury;
+        }
+
+        public void setBan_bury(int ban_bury) {
+            this.ban_bury = ban_bury;
         }
 
         public boolean isHas_video() {
@@ -400,14 +328,6 @@ public class PhotoBook {
             this.tag = tag;
         }
 
-        public ForwardInfoBean getForward_info() {
-            return forward_info;
-        }
-
-        public void setForward_info(ForwardInfoBean forward_info) {
-            this.forward_info = forward_info;
-        }
-
         public int getHas_m3u8_video() {
             return has_m3u8_video;
         }
@@ -430,6 +350,14 @@ public class PhotoBook {
 
         public void setRid(String rid) {
             this.rid = rid;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+
+        public void setLabel(String label) {
+            this.label = label;
         }
 
         public boolean isShow_portrait_article() {
@@ -576,12 +504,12 @@ public class PhotoBook {
             this.publish_time = publish_time;
         }
 
-        public int getGallary_image_count() {
-            return gallary_image_count;
+        public boolean isHas_image() {
+            return has_image;
         }
 
-        public void setGallary_image_count(int gallary_image_count) {
-            this.gallary_image_count = gallary_image_count;
+        public void setHas_image(boolean has_image) {
+            this.has_image = has_image;
         }
 
         public int getCell_layout_style() {
@@ -598,14 +526,6 @@ public class PhotoBook {
 
         public void setTag_id(long tag_id) {
             this.tag_id = tag_id;
-        }
-
-        public String getAction_extra() {
-            return action_extra;
-        }
-
-        public void setAction_extra(String action_extra) {
-            this.action_extra = action_extra;
         }
 
         public int getVideo_style() {
@@ -630,6 +550,14 @@ public class PhotoBook {
 
         public void setDisplay_url(String display_url) {
             this.display_url = display_url;
+        }
+
+        public boolean isIs_stick() {
+            return is_stick;
+        }
+
+        public void setIs_stick(boolean is_stick) {
+            this.is_stick = is_stick;
         }
 
         public long getItem_id() {
@@ -670,14 +598,6 @@ public class PhotoBook {
 
         public void setCell_flag(int cell_flag) {
             this.cell_flag = cell_flag;
-        }
-
-        public UserInfoBean getUser_info() {
-            return user_info;
-        }
-
-        public void setUser_info(UserInfoBean user_info) {
-            this.user_info = user_info;
         }
 
         public String getSource_open_url() {
@@ -752,12 +672,12 @@ public class PhotoBook {
             this.user_repin = user_repin;
         }
 
-        public boolean isHas_image() {
-            return has_image;
+        public int getLabel_style() {
+            return label_style;
         }
 
-        public void setHas_image(boolean has_image) {
-            this.has_image = has_image;
+        public void setLabel_style(int label_style) {
+            this.label_style = label_style;
         }
 
         public int getItem_version() {
@@ -766,14 +686,6 @@ public class PhotoBook {
 
         public void setItem_version(int item_version) {
             this.item_version = item_version;
-        }
-
-        public MediaInfoBean getMedia_info() {
-            return media_info;
-        }
-
-        public void setMedia_info(MediaInfoBean media_info) {
-            this.media_info = media_info;
         }
 
         public long getGroup_id() {
@@ -792,6 +704,70 @@ public class PhotoBook {
             this.middle_image = middle_image;
         }
 
+        public String getVideo_id() {
+            return video_id;
+        }
+
+        public void setVideo_id(String video_id) {
+            this.video_id = video_id;
+        }
+
+        public String getMedia_name() {
+            return media_name;
+        }
+
+        public void setMedia_name(String media_name) {
+            this.media_name = media_name;
+        }
+
+        public VideoDetailInfoBean getVideo_detail_info() {
+            return video_detail_info;
+        }
+
+        public void setVideo_detail_info(VideoDetailInfoBean video_detail_info) {
+            this.video_detail_info = video_detail_info;
+        }
+
+        public int getVideo_duration() {
+            return video_duration;
+        }
+
+        public void setVideo_duration(int video_duration) {
+            this.video_duration = video_duration;
+        }
+
+        public int getGroup_flags() {
+            return group_flags;
+        }
+
+        public void setGroup_flags(int group_flags) {
+            this.group_flags = group_flags;
+        }
+
+        public UserInfoBean getUser_info() {
+            return user_info;
+        }
+
+        public void setUser_info(UserInfoBean user_info) {
+            this.user_info = user_info;
+        }
+
+        public MediaInfoBean getMedia_info() {
+            return media_info;
+        }
+
+        public void setMedia_info(MediaInfoBean media_info) {
+            this.media_info = media_info;
+        }
+
+        public int getGallary_image_count() {
+            return gallary_image_count;
+        }
+
+        public void setGallary_image_count(int gallary_image_count) {
+            this.gallary_image_count = gallary_image_count;
+        }
+
         public String getLog_extra() {
             return log_extra;
         }
@@ -800,28 +776,12 @@ public class PhotoBook {
             this.log_extra = log_extra;
         }
 
-        public boolean isMore_mode() {
-            return more_mode;
-        }
-
-        public void setMore_mode(boolean more_mode) {
-            this.more_mode = more_mode;
-        }
-
         public String getDisplay_info() {
             return display_info;
         }
 
         public void setDisplay_info(String display_info) {
             this.display_info = display_info;
-        }
-
-        public String getLabel() {
-            return label;
-        }
-
-        public void setLabel(String label) {
-            this.label = label;
         }
 
         public int getExpire_seconds() {
@@ -864,19 +824,19 @@ public class PhotoBook {
             this.ad_label = ad_label;
         }
 
-        public List<ImageListBean> getImage_list() {
+        public List<ImageBean> getImage_list() {
             return image_list;
         }
 
-        public void setImage_list(List<ImageListBean> image_list) {
+        public void setImage_list(List<ImageBean> image_list) {
             this.image_list = image_list;
         }
 
-        public List<FilterWordsBean> getFilter_words() {
+        public List<?> getFilter_words() {
             return filter_words;
         }
 
-        public void setFilter_words(List<FilterWordsBean> filter_words) {
+        public void setFilter_words(List<?> filter_words) {
             this.filter_words = filter_words;
         }
 
@@ -896,33 +856,204 @@ public class PhotoBook {
             this.large_image_list = large_image_list;
         }
 
-        public static class ForwardInfoBean {
-            /**
-             * forward_count : 11
-             */
+        public static class MiddleImageBean {
+            private String url;
 
-            private int forward_count;
-
-            public int getForward_count() {
-                return forward_count;
+            public String getUrl() {
+                return url;
             }
 
-            public void setForward_count(int forward_count) {
-                this.forward_count = forward_count;
+            public void setUrl(String url) {
+                this.url = url;
+            }
+        }
+
+        public static class VideoDetailInfoBean {
+
+            private int group_flags;
+            private int video_type;
+            private int video_preloading_flag;
+            private int direct_play;
+            private DetailVideoLargeImageBean detail_video_large_image;
+            private int show_pgc_subscribe;
+            private String video_third_monitor_url;
+            private String video_id;
+            private int video_watching_count;
+            private int video_watch_count;
+            private List<?> video_url;
+
+            public int getGroup_flags() {
+                return group_flags;
+            }
+
+            public void setGroup_flags(int group_flags) {
+                this.group_flags = group_flags;
+            }
+
+            public int getVideo_type() {
+                return video_type;
+            }
+
+            public void setVideo_type(int video_type) {
+                this.video_type = video_type;
+            }
+
+            public int getVideo_preloading_flag() {
+                return video_preloading_flag;
+            }
+
+            public void setVideo_preloading_flag(int video_preloading_flag) {
+                this.video_preloading_flag = video_preloading_flag;
+            }
+
+            public int getDirect_play() {
+                return direct_play;
+            }
+
+            public void setDirect_play(int direct_play) {
+                this.direct_play = direct_play;
+            }
+
+            public DetailVideoLargeImageBean getDetail_video_large_image() {
+                return detail_video_large_image;
+            }
+
+            public void setDetail_video_large_image(DetailVideoLargeImageBean detail_video_large_image) {
+                this.detail_video_large_image = detail_video_large_image;
+            }
+
+            public int getShow_pgc_subscribe() {
+                return show_pgc_subscribe;
+            }
+
+            public void setShow_pgc_subscribe(int show_pgc_subscribe) {
+                this.show_pgc_subscribe = show_pgc_subscribe;
+            }
+
+            public String getVideo_third_monitor_url() {
+                return video_third_monitor_url;
+            }
+
+            public void setVideo_third_monitor_url(String video_third_monitor_url) {
+                this.video_third_monitor_url = video_third_monitor_url;
+            }
+
+            public String getVideo_id() {
+                return video_id;
+            }
+
+            public void setVideo_id(String video_id) {
+                this.video_id = video_id;
+            }
+
+            public int getVideo_watching_count() {
+                return video_watching_count;
+            }
+
+            public void setVideo_watching_count(int video_watching_count) {
+                this.video_watching_count = video_watching_count;
+            }
+
+            public int getVideo_watch_count() {
+                return video_watch_count;
+            }
+
+            public void setVideo_watch_count(int video_watch_count) {
+                this.video_watch_count = video_watch_count;
+            }
+
+            public List<?> getVideo_url() {
+                return video_url;
+            }
+
+            public void setVideo_url(List<?> video_url) {
+                this.video_url = video_url;
+            }
+
+            public static class DetailVideoLargeImageBean {
+                /**
+                 * url : http://p3.pstatp.com/video1609/1dbf00030a5b1f9c0c24
+                 * width : 580
+                 * url_list : [{"url":"http://p3.pstatp.com/video1609/1dbf00030a5b1f9c0c24"},{"url":"http://pb9.pstatp.com/video1609/1dbf00030a5b1f9c0c24"},{"url":"http://pb1.pstatp.com/video1609/1dbf00030a5b1f9c0c24"}]
+                 * uri : video1609/1dbf00030a5b1f9c0c24
+                 * height : 326
+                 */
+
+                private String url;
+                private int width;
+                private String uri;
+                private int height;
+                private List<UrlListBean> url_list;
+
+                public String getUrl() {
+                    return url;
+                }
+
+                public void setUrl(String url) {
+                    this.url = url;
+                }
+
+                public int getWidth() {
+                    return width;
+                }
+
+                public void setWidth(int width) {
+                    this.width = width;
+                }
+
+                public String getUri() {
+                    return uri;
+                }
+
+                public void setUri(String uri) {
+                    this.uri = uri;
+                }
+
+                public int getHeight() {
+                    return height;
+                }
+
+                public void setHeight(int height) {
+                    this.height = height;
+                }
+
+                public List<UrlListBean> getUrl_list() {
+                    return url_list;
+                }
+
+                public void setUrl_list(List<UrlListBean> url_list) {
+                    this.url_list = url_list;
+                }
+
+                public static class UrlListBean {
+                    /**
+                     * url : http://p3.pstatp.com/video1609/1dbf00030a5b1f9c0c24
+                     */
+
+                    private String url;
+
+                    public String getUrl() {
+                        return url;
+                    }
+
+                    public void setUrl(String url) {
+                        this.url = url;
+                    }
+                }
             }
         }
 
         public static class UserInfoBean {
             /**
-             * verified_content :
-             * avatar_url : http://p1.pstatp.com/thumb/e59000f3a39dcd5f2ec
-             * user_id : 52177476743
-             * name : 楚安汽修资料
+             * verified_content : 头条号优质军事原创作者
+             * avatar_url : http://p1.pstatp.com/thumb/412001783f76c832809
+             * user_id : 6579355426
+             * name : 大国之翼
              * follower_count : 0
              * follow : false
-             * user_auth_info :
-             * user_verified : false
-             * description : 汽修行业的良师益友！
+             * user_auth_info : {"auth_type": "0", "other_auth": {"pgc": "头条号优质军事原创作者"}, "auth_info": "头条号优质军事原创作者"}
+             * user_verified : true
+             * description : 品读有温度、有思想、有内涵、有硬度文章
              */
 
             private String verified_content;
@@ -1010,16 +1141,16 @@ public class PhotoBook {
 
         public static class MediaInfoBean {
             /**
-             * user_id : 52177476743
+             * user_id : 6579355426
              * verified_content :
-             * avatar_url : http://p3.pstatp.com/large/e59000f3a39dcd5f2ec
-             * media_id : 52177587849
-             * name : 楚安汽修资料
+             * avatar_url : http://p3.pstatp.com/large/412001783f76c832809
+             * media_id : 6579376245
+             * name : 大国之翼
              * recommend_type : 0
              * follow : false
              * recommend_reason :
              * is_star_user : false
-             * user_verified : false
+             * user_verified : true
              */
 
             private long user_id;
@@ -1114,186 +1245,6 @@ public class PhotoBook {
             }
         }
 
-        public static class MiddleImageBean {
-            /**
-             * url : http://p1.pstatp.com/list/1bf70006d1edae58362f
-             * width : 549
-             * url_list : [{"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb3.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb9.pstatp.com/list/1bf70006d1edae58362f"}]
-             * uri : list/1bf70006d1edae58362f
-             * height : 308
-             */
-
-            private String url;
-            private int width;
-            private String uri;
-            private int height;
-            private List<UrlListBean> url_list;
-
-            public String getUrl() {
-                return url;
-            }
-
-            public void setUrl(String url) {
-                this.url = url;
-            }
-
-            public int getWidth() {
-                return width;
-            }
-
-            public void setWidth(int width) {
-                this.width = width;
-            }
-
-            public String getUri() {
-                return uri;
-            }
-
-            public void setUri(String uri) {
-                this.uri = uri;
-            }
-
-            public int getHeight() {
-                return height;
-            }
-
-            public void setHeight(int height) {
-                this.height = height;
-            }
-
-            public List<UrlListBean> getUrl_list() {
-                return url_list;
-            }
-
-            public void setUrl_list(List<UrlListBean> url_list) {
-                this.url_list = url_list;
-            }
-
-            public static class UrlListBean {
-                /**
-                 * url : http://p1.pstatp.com/list/1bf70006d1edae58362f
-                 */
-
-                private String url;
-
-                public String getUrl() {
-                    return url;
-                }
-
-                public void setUrl(String url) {
-                    this.url = url;
-                }
-            }
-        }
-
-        public static class ImageListBean {
-            /**
-             * url : http://p1.pstatp.com/list/1bf70006d1edae58362f
-             * width : 549
-             * url_list : [{"url":"http://p1.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb3.pstatp.com/list/1bf70006d1edae58362f"},{"url":"http://pb9.pstatp.com/list/1bf70006d1edae58362f"}]
-             * uri : list/1bf70006d1edae58362f
-             * height : 308
-             */
-
-            private String url;
-            private int width;
-            private String uri;
-            private int height;
-            private List<UrlListBeanX> url_list;
-
-            public String getUrl() {
-                return url;
-            }
-
-            public void setUrl(String url) {
-                this.url = url;
-            }
-
-            public int getWidth() {
-                return width;
-            }
-
-            public void setWidth(int width) {
-                this.width = width;
-            }
-
-            public String getUri() {
-                return uri;
-            }
-
-            public void setUri(String uri) {
-                this.uri = uri;
-            }
-
-            public int getHeight() {
-                return height;
-            }
-
-            public void setHeight(int height) {
-                this.height = height;
-            }
-
-            public List<UrlListBeanX> getUrl_list() {
-                return url_list;
-            }
-
-            public void setUrl_list(List<UrlListBeanX> url_list) {
-                this.url_list = url_list;
-            }
-
-            public static class UrlListBeanX {
-                /**
-                 * url : http://p1.pstatp.com/list/1bf70006d1edae58362f
-                 */
-
-                private String url;
-
-                public String getUrl() {
-                    return url;
-                }
-
-                public void setUrl(String url) {
-                    this.url = url;
-                }
-            }
-        }
-
-        public static class FilterWordsBean {
-            /**
-             * id : 8:0
-             * name : 重复、旧闻
-             * is_selected : false
-             */
-
-            private String id;
-            private String name;
-            private boolean is_selected;
-
-            public String getId() {
-                return id;
-            }
-
-            public void setId(String id) {
-                this.id = id;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name) {
-                this.name = name;
-            }
-
-            public boolean isIs_selected() {
-                return is_selected;
-            }
-
-            public void setIs_selected(boolean is_selected) {
-                this.is_selected = is_selected;
-            }
-        }
-
         public static class ActionListBean {
             /**
              * action : 1
@@ -1330,6 +1281,45 @@ public class PhotoBook {
             }
 
             public static class ExtraBean {
+            }
+        }
+
+        public static class ImageBean{
+            private int height;
+            private String uri;
+            private String url;
+            private int width;
+
+            public int getHeight() {
+                return height;
+            }
+
+            public void setHeight(int height) {
+                this.height = height;
+            }
+
+            public String getUri() {
+                return uri;
+            }
+
+            public void setUri(String uri) {
+                this.uri = uri;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
+
+            public int getWidth() {
+                return width;
+            }
+
+            public void setWidth(int width) {
+                this.width = width;
             }
         }
     }

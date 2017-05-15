@@ -11,9 +11,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
-                GETUI_APP_ID : "OfBjJep4lF8IGpQbWETWk3",
-                GETUI_APP_KEY : "turIx4oYoG7iyZF7u6lNy1",
-                GETUI_APP_SECRET : "OscCUBnlXN8FhfqGvpN1x2"
+                GETUI_APP_ID : "KofkeFIxxn8POPverlXcv6",
+                GETUI_APP_KEY : "iaH45AHSxd7ULfzJkUZ1U2",
+                GETUI_APP_SECRET : "Udp2E4JuKr77vGVDP1XLq4"
         ]
     }
     buildTypes {
@@ -41,4 +41,5 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.7.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile project(':springview')
 }
