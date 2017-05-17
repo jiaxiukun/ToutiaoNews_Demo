@@ -14,15 +14,15 @@ import com.bw.toutiaonews_demo.bean.TuijianBean1;
 import com.bw.toutiaonews_demo.utils.IAsyncTask;
 import com.bw.toutiaonews_demo.utils.ResponseListener;
 import com.bw.toutiaonews_demo.utils.Urls;
-import com.bwei.springview.container.DefaultFooter;
-import com.bwei.springview.container.DefaultHeader;
+import com.bwei.springview.container.MeituanFooter;
+import com.bwei.springview.container.MeituanHeader;
 import com.bwei.springview.widget.SpringView;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TuijianFragment extends BaseFragment implements ResponseListener, SpringView.OnFreshListener {
+public class TuijianFragment extends BaseFragment implements ResponseListener {
 
     private ListView listView;
     private SpringView springView;
@@ -43,13 +43,34 @@ public class TuijianFragment extends BaseFragment implements ResponseListener, S
         springView = (SpringView) view.findViewById(R.id.tuijian_springview);
         springView.setType(SpringView.Type.FOLLOW);
 
-        springView.setHeader(new DefaultHeader(getContext()));
-        springView.setFooter(new DefaultFooter(getContext()));
+        springView.setHeader(new MeituanHeader(getContext()));
+        springView.setFooter(new MeituanFooter(getContext()));
 
-        adapter = new NewsListAdapter(getActivity(),list);
+        adapter = new NewsListAdapter(getActivity(), list);
         listView.setAdapter(adapter);
 
-        springView.setListener(this);
+        springView.setListener(new SpringView.OnFreshListener() {
+            @Override
+            public void onRefresh() {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        springView.onFinishFreshAndLoad();
+//                        adapter.notifyDataSetChanged();
+//                    }
+//                }, 1000);
+            }
+
+            @Override
+            public void onLoadmore() {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        springView.onFinishFreshAndLoad();
+//                    }
+//                }, 1000);
+            }
+        });
         getData();
         return view;
     }
@@ -79,16 +100,6 @@ public class TuijianFragment extends BaseFragment implements ResponseListener, S
 
     @Override
     public void onFail() {
-
-    }
-
-    @Override
-    public void onRefresh() {
-
-    }
-
-    @Override
-    public void onLoadmore() {
 
     }
 }
