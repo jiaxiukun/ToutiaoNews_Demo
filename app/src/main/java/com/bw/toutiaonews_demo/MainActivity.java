@@ -9,7 +9,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.bw.toutiaonews_demo.fraggments.IndexFragment;
 import com.bw.toutiaonews_demo.fraggments.MentLeftFragment;
 import com.bw.toutiaonews_demo.fraggments.MenuRightFragment;
 import com.bw.toutiaonews_demo.fraggments.events.EventActivity;
@@ -45,13 +44,13 @@ public class MainActivity extends SlidingFragmentActivity {
 
     private void initLeftRight() {
 
-        IndexFragment indexFragment = new IndexFragment();
+     /*   IndexFragment indexFragment = new IndexFragment();
 
         if (!indexFragment.isAdded()) {
             getSupportFragmentManager().beginTransaction().add(R.id.container, indexFragment).commit();
         }
 
-        getSupportFragmentManager().beginTransaction().show(indexFragment).commit();
+        getSupportFragmentManager().beginTransaction().show(indexFragment).commit();*/
 
         Fragment legtFragment = new MentLeftFragment();
         setBehindContentView(R.layout.left_menu_frame);
@@ -101,10 +100,10 @@ public class MainActivity extends SlidingFragmentActivity {
             //夜间模式
             windowManager.addView(view, layoutParams);
         }
-        //更改字体颜色
+      /*  //更改字体颜色
         switchTextViewColor((ViewGroup) getWindow().getDecorView(), event.isWhite());
         IndexFragment indexFragment = (IndexFragment) list.get(0);
-        indexFragment.changeMode(event.isWhite());
+        indexFragment.changeMode(event.isWhite());*/
 
     }
 
