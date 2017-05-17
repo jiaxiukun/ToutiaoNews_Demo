@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class IAsyncTask extends AsyncTask<String, Void, String> {
 
+    //看不懂
     ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
             CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE_SECONDS, TimeUnit.SECONDS,
             sPoolWorkQueue);
