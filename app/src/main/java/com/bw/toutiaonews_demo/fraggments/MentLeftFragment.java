@@ -110,7 +110,7 @@ public class MentLeftFragment extends Fragment implements View.OnClickListener {
                  * 最后用map,imageloader来显示图片
                  */
 
-                ImageLoader.getInstance().displayImage(iconurl, img_qq);
+                ImageLoader.getInstance().displayImage(iconurl,img_qq);
             }
 
             @Override
