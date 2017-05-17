@@ -12,6 +12,7 @@ import com.bw.toutiaonews_demo.fraggments.anyfragments.TuijianFragment;
 
 public class IndexFragmentAdapter extends FragmentPagerAdapter {
 
+    //标题
     public String[] TITLE = {"推荐", "热点", "社会", "科技", "体育", "娱乐", "军事", "财经", "视频", "美女"};
 
     public IndexFragmentAdapter(FragmentManager fm) {
