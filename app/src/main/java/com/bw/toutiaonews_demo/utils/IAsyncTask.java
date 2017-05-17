@@ -11,12 +11,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by muhanxi on 17/4/24.
- */
+public class IAsyncTask extends AsyncTask<String, Void, String> {
 
-public class IAsyncTask extends AsyncTask<String,Void,String> {
-
+    //看不懂
     ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
             CORE_POOL_SIZE, MAXIMUM_POOL_SIZE, KEEP_ALIVE_SECONDS, TimeUnit.SECONDS,
             sPoolWorkQueue);
@@ -26,16 +23,17 @@ public class IAsyncTask extends AsyncTask<String,Void,String> {
     private static final BlockingQueue<Runnable> sPoolWorkQueue =
             new LinkedBlockingQueue<Runnable>(128);
 
-    public ResponseListener listener ;
-    public  IAsyncTask(ResponseListener listener){
+    public ResponseListener listener;
 
-        this.listener= listener ;
+    public IAsyncTask(ResponseListener listener) {
+
+        this.listener = listener;
 
     }
 
     //发送请求
-    public void iExecuteOnExecutor(IAsyncTask task,String... args){
-        task.executeOnExecutor(threadPoolExecutor,args);
+    public void iExecuteOnExecutor(IAsyncTask task, String... args) {
+        task.executeOnExecutor(threadPoolExecutor, args);
     }
 
     private URL url;
@@ -48,81 +46,72 @@ public class IAsyncTask extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... params) {
 
-        String result = "" ;
+        String result = "";
         HttpURLConnection connection = null;
-        String path = params[0] ;
-        InputStream inputStream = null ;
-        if(TextUtils.isEmpty(path)){
+        String path = params[0];
+        InputStream inputStream = null;
+        if (TextUtils.isEmpty(path)) {
             return result;
         }
 
 
         try {
-            Thread.sleep(5000);
-            URL url =   new URL(path);
+            Thread.sleep(10000);
+            URL url = new URL(path);
 
-             connection = (HttpURLConnection) url.openConnection() ;
+            connection = (HttpURLConnection) url.openConnection();
 
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(20000);
             connection.setReadTimeout(20000);
-            if(connection.getResponseCode() == 200){
-                inputStream =  connection.getInputStream() ;
-                result =  StringUtils.inputStreamToString(inputStream);
+            if (connection.getResponseCode() == 200) {
+                inputStream = connection.getInputStream();
+                result = StringUtils.inputStreamToString(inputStream);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(inputStream != null){
+                if (inputStream != null) {
                     inputStream.close();
                     inputStream = null;
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.disconnect();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-
             System.out.println("result = " + result);
-            return  result ;
+            return result;
         }
     }
-
 
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
 
-        if(listener != null){
+        if (listener != null) {
 
-
-            if(TextUtils.isEmpty(result)){
+            if (TextUtils.isEmpty(result)) {
                 //回调失败
                 listener.onFail();
-            }else{
+            } else {
                 // 回调成功
-
-                //
                 listener.onSuccess(result);
             }
         } else {
             listener.onFail();
         }
-
-
-
     }
 
     @Override
     protected void onCancelled(String s) {
         super.onCancelled(s);
-        if(listener != null){
+        if (listener != null) {
             listener.onFail();
         }
-
     }
 }
